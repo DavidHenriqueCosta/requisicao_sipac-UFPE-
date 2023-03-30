@@ -148,7 +148,8 @@ with open("planilha.csv") as f:
         pyautogui.typewrite(quantidade, interval=0.08)
         time.sleep(2)
         pyautogui.click(pyautogui.locateCenterOnScreen("img\\incluir.png", confidence=0.8), duration=1)
-        time.sleep(5)
+        time.sleep(3)
 
-pyautogui.screenshot(imageFilename='novarequisicao')
+#pyautogui.screenshot(imageFilename='novarequisicao')
+pyautogui.screenshot(f"requisicoes_cadastradas\\REQUISIÇÃO{gpmaterial}.png")
 pyautogui.alert(text="programa finalizado com sucesso",title="aviso do sistema",button="OK")
