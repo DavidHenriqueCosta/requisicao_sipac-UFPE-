@@ -11,7 +11,7 @@ grupomaterial = gpmaterial
 usuario = str
 senha = getpass
 
-
+'''
 def get_input():
     global gpmaterial
     global usuario
@@ -21,7 +21,7 @@ def get_input():
     senha = senha.get()
     window.destroy() 
 
-window = tk.Tk()
+ window = tk.Tk()
 label = tk.Label(window, text='Qual o grupo material da requisição que será cadastrada?')
 label.pack()
 gp = tk.Entry(window)
@@ -81,6 +81,7 @@ time.sleep(3)
 pyautogui.hotkey('tab')
 pyautogui.click(pyautogui.locateCenterOnScreen("img\\continuar.png", confidence=0.8), duration=0.5)
 time.sleep(5)
+'''
 with open("planilha.csv") as f:
     next(f)
 
@@ -148,8 +149,8 @@ with open("planilha.csv") as f:
         pyautogui.typewrite(quantidade, interval=0.08)
         time.sleep(2)
         pyautogui.click(pyautogui.locateCenterOnScreen("img\\incluir.png", confidence=0.8), duration=1)
-        time.sleep(3)
+        time.sleep(10)
 
 #pyautogui.screenshot(imageFilename='novarequisicao')
 pyautogui.screenshot(f"requisicoes_cadastradas\\REQUISIÇÃO{gpmaterial}.png")
-pyautogui.alert(text="programa finalizado com sucesso",title="aviso do sistema",button="OK")
+pyautogui.alert(text="programa finalizado com sucesso",title="aviso do sistema",button=100)
